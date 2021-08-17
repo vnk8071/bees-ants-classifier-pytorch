@@ -28,3 +28,7 @@ if __name__ == '__main__':
     os.makedirs('./data')
     download_file_from_pytorch(URL, TARGET_PATH)
     print('Download done')
+
+    with ZipFile('./data/hymenoptera_data.zip', 'r') as zip_file:
+        zip_file.extractall('./data')
+    print('Success unzip file')
