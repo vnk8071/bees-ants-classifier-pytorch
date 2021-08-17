@@ -20,7 +20,11 @@ pip install -r requirements.txt
 Download and set up data by
 ```bash
 bash setup_data.sh
+or
+./setup_data.sh
 ```
+
+Wait to download data
 
 ## Usage
 Run
