@@ -36,7 +36,10 @@ Expected output:
 ```bash
 -- Downloading ResNet18
 
+Start trainig
 Epoch 1/10
 train - Loss: 0.8310 - Acc: 0.3689
 val - Loss: 0.8525 - Acc: 0.3464
+...
+Done
 ```
