@@ -1,6 +1,9 @@
 ﻿# bees-ants-classifier
 
 Reference: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
+Run project with CPU:
+- Training complete in 3m 12s
+- Best val Acc: 0.843137
 
 ## Installation
 Create virtual environment
