@@ -1,8 +1,12 @@
 ﻿# bees-ants-classifier
 
+Organizing project: https://github.com/qnn122/organizing-training-project-tutorial
+
 Reference: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
 
-Run project with CPU:
+Run project with CPU
+
+Result of 10 epoch:
 - Training complete in 3m 12s
 - Best val Acc: 0.843137
 
