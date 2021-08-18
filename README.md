@@ -46,8 +46,8 @@ Expected output:
 
 Start trainig
 Epoch 1/10
-train - Loss: 0.8310 - Acc: 0.3689
-val - Loss: 0.8525 - Acc: 0.3464
+[TRAIN] - Loss: 0.8310 - Acc: 0.3689
+[VAL] - Loss: 0.8525 - Acc: 0.3464
 ...
 Done
 ```
