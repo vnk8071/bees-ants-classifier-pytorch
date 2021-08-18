@@ -1,8 +1,10 @@
 from src.trainer import BeeAntClassifier
 import json
+from pprint import pprint
 
 CONFIG_PATH = './config/train_config.json'
 params = json.load(open(CONFIG_PATH, 'r'))
+pprint(params)
 model = BeeAntClassifier(**params)
 
 
@@ -11,6 +13,5 @@ def main():
 
 
 if __name__ == '__main__':
-    print('Start training')
+    print('START TRAINING')
     main()
-    print('Done')
