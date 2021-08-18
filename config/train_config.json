@@ -1,7 +1,7 @@
 {
     "DATA_DIR": "./data/hymenoptera_data",
     "SAVE_MODEL_DIR": "./models",
-    "SAVE_MODEL_PATH": "./models/best_model.pt",
+    "SAVE_MODEL_PATH": "./models/best_model.pth",
     "SEED": 8,
     "IMAGE_SIZE": 224,
     "PRETRAINED_MEANS": [

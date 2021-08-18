@@ -1,0 +1,19 @@
+{
+    "TEST_IMAGE_DIR": "./data/hymenoptera_data/test",
+    "CHECKPOINT_DIR": "./models/best_model.pth",
+    "SAVE_PREDICTS_CSV": "./predicts/predict_test.csv",
+    "IMAGE_SIZE": 224,
+    "BATCH_SIZE": 1,
+    "NUM_WORKERS": 0,
+    "IMAGENET_MEAN": [
+        0.485,
+        0.456,
+        0.406
+    ],
+    "IMAGENET_STD": [
+        0.229,
+        0.224,
+        0.225
+    ],
+    "NUM_CLASSES": 2
+}
