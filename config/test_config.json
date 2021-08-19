@@ -5,6 +5,10 @@
     "IMAGE_SIZE": 224,
     "BATCH_SIZE": 1,
     "NUM_WORKERS": 0,
+    "CLASSES": [
+        "ant",
+        "bee"
+    ],
     "IMAGENET_MEAN": [
         0.485,
         0.456,
