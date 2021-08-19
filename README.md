@@ -1,6 +1,8 @@
-﻿# bees-ants-classifier
+﻿# Bees-Ants-classifier using Pytorch
 
-Organizing project: https://github.com/qnn122/organizing-training-project-tutorial
+Data collected form Pytorch: https://download.pytorch.org/tutorial/hymenoptera_data.zip
+
+Organizing project follow: https://github.com/qnn122/organizing-training-project-tutorial
 
 Reference: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
 
@@ -43,6 +45,8 @@ python train.py
 Expected output:
 ```bash
 -- Downloading ResNet18
+
+train_config file
 
 Start trainig
 Epoch 1/10
