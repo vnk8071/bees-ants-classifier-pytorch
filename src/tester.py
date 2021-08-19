@@ -6,6 +6,7 @@ import torchvision.datasets as datasets
 from torchvision import transforms
 from src.model import ResNet
 from torchvision.transforms import transforms
+from src.test_dataset import BeeAndAntDatasetTest
 
 
 class TestConfig(object):
@@ -26,11 +27,11 @@ class Tester(TestConfig):
         ]
         self.image_transformation = transforms.Compose(image_transformation)
 
-    def get_test_loader(self, test_image_dir):
-        image_datasets = datasets.ImageFolder(os.path.join(
-            test_image_dir), self.image_transformation)
-        test_loader = DataLoader(
-            dataset=image_datasets, batch_size=self.BATCH_SIZE, shuffle=None, num_workers=self.NUM_WORKERS)
+    def get_test_loader(self):
+        test_dataset = BeeAndAntDatasetTest(
+            self.TEST_IMAGE_DIR, self.image_transformation)
+        test_loader = DataLoader(test_dataset, batch_size=self.BATCH_SIZE,
+                                 shuffle=None, num_workers=self.NUM_WORKERS)
         return test_loader
 
     def load_model(self):
@@ -40,7 +41,7 @@ class Tester(TestConfig):
         return model
 
     def test(self):
-        test_loader = self.get_test_loader(self.TEST_IMAGE_DIR)
+        test_loader = self.get_test_loader()
         model = self.load_model()
         file_list = list()
         out_pred = torch.FloatTensor().to(self.device)
@@ -49,16 +50,26 @@ class Tester(TestConfig):
                 images = images.to(self.device)
 
                 pred = model(images)
-                pred = pred.squeeze(1)
+
                 out_pred = torch.cat((out_pred, pred), 0)
-                file_list.append(files)
-        return out_pred.to('cpu').tolist(), file_list
+
+                file_list.append(files[0])
+        return out_pred.to("cpu").tolist(), file_list
 
     def save_predict_csv(self):
+        labels = ['ant', 'bee']
+        results = list()
         out_pred, file_list = self.test()
+        for ps in out_pred:
+            result = {'prob_ant': 0, 'prob_bee': 0, 'label': labels[0]}
+            result['prob_ant'] = float(ps[0])
+            result['prob_bee'] = float(ps[1])
+            result['label'] = labels[0] if result['prob_ant'] > result['prob_bee'] else labels[1]
+            results.append(result)
+
         # Save predict
         if not os.path.exists('./predicts'):
             os.makedirs('./predicts')
-        df = pd.DataFrame({'image': file_list, 'predict': out_pred})
+        df = pd.DataFrame({'image': file_list, 'predict': results})
         df.to_csv(self.SAVE_PREDICTS_CSV, index=False)
         print('DONE')
