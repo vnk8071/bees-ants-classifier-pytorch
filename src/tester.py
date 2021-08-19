@@ -44,19 +44,27 @@ class Tester(TestConfig):
         test_loader = self.get_test_loader()
         model = self.load_model()
         file_list = list()
-        out_pred = torch.FloatTensor().to(self.device)
+        predict_labels = list()
+        # out_pred = torch.FloatTensor().to(self.device)
         with torch.no_grad():
             for index, (images, files) in enumerate(test_loader):
                 images = images.to(self.device)
 
                 pred = model(images)
 
-                out_pred = torch.cat((out_pred, pred), 0)
-
+                _, predicted = torch.max(pred, 1)
+                classifier = self.CLASSES[predicted]
+                predict_labels.append(classifier)
                 file_list.append(files[0])
+                '''
+                out_pred = torch.cat((out_pred, pred), 0)
         return out_pred.to("cpu").tolist(), file_list
+        '''
+        return predict_labels, file_list
 
     def save_predict_csv(self):
+        '''
+        Orther method
         labels = ['ant', 'bee']
         results = list()
         out_pred, file_list = self.test()
@@ -66,10 +74,12 @@ class Tester(TestConfig):
             result['prob_bee'] = float(ps[1])
             result['label'] = labels[0] if result['prob_ant'] > result['prob_bee'] else labels[1]
             results.append(result)
+        '''
+        predict_labels, file_list = self.test()
 
         # Save predict
         if not os.path.exists('./predicts'):
             os.makedirs('./predicts')
-        df = pd.DataFrame({'image': file_list, 'predict': results})
+        df = pd.DataFrame({'image': file_list, 'predict': predict_labels})
         df.to_csv(self.SAVE_PREDICTS_CSV, index=False)
         print('DONE')
