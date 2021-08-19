@@ -51,3 +51,15 @@ Epoch 1/10
 ...
 Done
 ```
+
+## Prediction
+Change the directory of TEST_IMAGES_DIR in test_config.json
+
+After that, run
+```bash
+python test.py
+```
+
+Output csv file save into predicts folder
+
+Let's try.
