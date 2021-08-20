@@ -10,26 +10,17 @@ Result of 10 epochs:
 
 Structure directory of data
 
+```bash
 hymenoptera_data/
-
 ├── train
-
 │   ├── ants
-
 |   |    ├── ant1_train.png
-
 |   |    ├── ...
-
 |   |    └── antn_train.png
-
 │   └── bees
-
 |        ├── bee1_train.png
-
 |        ├── ...
-
 │        └── been_train.png
-
 └── val
     ├── ants
     |    ├── ant1_val.png   
@@ -39,7 +30,8 @@ hymenoptera_data/
          ├── bee1_val.png     
          ├── ...       
          └── been_val.png
-    
+```
+
 ## Table of content
 * [Acknowledgements](#Acknowledgements)
 * [Installation](#Installation)
