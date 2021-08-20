@@ -8,19 +8,19 @@ Result of 10 epochs:
 
 <ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
-Structure directory of data
+The directory of dataset structured
 
 ```bash
 hymenoptera_data/
 ├── train
-│   ├── ants
+|   ├── ants
 |   |    ├── ant1_train.png
 |   |    ├── ...
 |   |    └── antn_train.png
-│   └── bees
+|   └── bees
 |        ├── bee1_train.png
 |        ├── ...
-│        └── been_train.png
+|        └── been_train.png
 └── val
     ├── ants
     |    ├── ant1_val.png   
