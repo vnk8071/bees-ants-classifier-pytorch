@@ -48,14 +48,14 @@ Visualize:
 - Graph of model 
 - Result epoch of train and validate  
 
-Use Tensorboard 
+Use TensorBoard 
 ```bash
 tensorboard --logdir=runs
 ```
 
 After training:
 
-Open: http://localhost:6006/
+Open TensorBoard API: http://localhost:6006/
 
 ## Usage
 Run
