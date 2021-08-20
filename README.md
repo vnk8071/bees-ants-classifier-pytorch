@@ -1,22 +1,24 @@
 ﻿# Bees-Ants-classifier using Pytorch
+ 
+Run project with CPU
+
+Result of 10 epochs:
+- Training complete in 3m 12s
+- Best validate accuracy: 0.843137
 
 <ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
-<ins>Organizing project follow</ins>: https://github.com/qnn122/organizing-training-project-tutorial
-
-<ins>Reference</ins>: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
-
-Run project with CPU
-
-Result of 10 epoch:
-- Training complete in 3m 12s
-- Best val Acc: 0.843137
-
 ## Table of content
+* [Acknowledgements](#Acknowledgements)
 * [Install](#Install)
 * [Visualize](#Visualize)
 * [Usage](#Usage)
 * [Predict](#Predict)
+
+## Acknowledgements
+<ins>Organizing project follow</ins>: https://github.com/qnn122/organizing-training-project-tutorial
+
+<ins>Reference</ins>: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
 
 ## Install
 Create virtual environment
