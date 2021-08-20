@@ -12,6 +12,9 @@ Result of 10 epoch:
 - Training complete in 3m 12s
 - Best val Acc: 0.843137
 
+## Table of content
+* [Installation](## Installation)
+
 ## Installation
 Create virtual environment
 ```bash
