@@ -1,10 +1,10 @@
 ﻿# Bees-Ants-classifier using Pytorch
 
-<u>Data collected from Pytorch</u>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
+<ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
-<u>Organizing project follow</u>: https://github.com/qnn122/organizing-training-project-tutorial
+<ins>Organizing project follow</ins>: https://github.com/qnn122/organizing-training-project-tutorial
 
-<u>Reference</u>: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
+<ins>Reference</ins>: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
 
 Run project with CPU
 
@@ -42,8 +42,7 @@ or
 
 Wait to download data
 
-## Visualize
-
+## Visualization
 Visualize:
 - Show images
 - Graph of model 
@@ -78,7 +77,7 @@ Epoch 1/10
 Done
 ```
 
-## Predict
+## Prediction
 Change the directory of TEST_IMAGES_DIR in test_config.json
 
 After that, run
