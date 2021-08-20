@@ -1,11 +1,17 @@
+from matplotlib import cm
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import torchvision
+from torch.utils.tensorboard import SummaryWriter
 
 from src.dataset import BeeAntDataset
 from src.model import ResNet
 import os
 import time
+
+
+writer = SummaryWriter("runs/bees-ants-classifier")
 
 
 class Trainer(object):
@@ -31,6 +37,13 @@ class BeeAntClassifier(Trainer):
         NUM_EPOCHS = self.MAX_EPOCHS
         dataset_sizes, dataloaders = BeeAntDataset(
             self.DATA_DIR, self.IMAGE_SIZE).set_up_training_data(self.BATCH_SIZE, self.NUM_WORKERS)
+
+        examples = iter(dataloaders['train'])
+        image, _ = examples.__next__()
+        img_grid = torchvision.utils.make_grid(image, normalize=True)
+
+        writer.add_image('bee_ants_images', img_grid)
+        writer.add_graph(model, image)
 
         best_acc = 0.0
         best_val_loss = float('inf')
@@ -77,6 +90,16 @@ class BeeAntClassifier(Trainer):
                     dataset_sizes[phase]
                 print('[{}] - Loss: {:.4f} - Acc: {:.4f}'.format(
                     phase.upper(), epoch_loss, epoch_acc))
+
+                if phase == 'train':
+                    writer.add_scalar('train loss', epoch_loss, epoch+1)
+                    writer.add_scalar('train accuracy', epoch_acc, epoch+1)
+                else:
+                    writer.add_scalar('val loss', epoch_loss, epoch+1)
+                    writer.add_scalar('val accuracy', epoch_acc, epoch+1)
+                running_loss = 0.0
+                running_corrects = 0
+                writer.close()
 
                 if phase == 'val' and epoch_acc > best_acc:
                     best_acc = epoch_acc

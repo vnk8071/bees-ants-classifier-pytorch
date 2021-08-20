@@ -35,6 +35,20 @@ or
 ```
 
 Wait to download data
+## Visualize
+
+Visualize:
+    - Show images
+    - Graph of model
+    - Result epoch of train and validate  
+
+Use Tensorboard 
+```bash
+tensorboard --logdir=runs
+```
+
+After training:
+Open: http://localhost:6006/
 
 ## Usage
 Run
