@@ -13,7 +13,7 @@ Result of 10 epoch:
 - Best val Acc: 0.843137
 
 ## Table of content
-* [Installation](## Installation)
+* [Installation](##Installation)
 
 ## Installation
 Create virtual environment
