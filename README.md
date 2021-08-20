@@ -13,19 +13,19 @@ The directory of dataset structured
 ```bash
 hymenoptera_data/
 ├── train
-|   ├── ants
-|   |    ├── ant1_train.png
-|   |    ├── ...
-|   |    └── antn_train.png
-|   └── bees
-|        ├── bee1_train.png
-|        ├── ...
-|        └── been_train.png
+│   ├── ants
+│   │    ├── ant1_train.png
+│   │    ├── ...
+│   │    └── antn_train.png
+│   └── bees
+│        ├── bee1_train.png
+│        ├── ...
+│        └── been_train.png
 └── val
     ├── ants
-    |    ├── ant1_val.png   
-    |    ├── ... 
-    |    └── antn_val.png   
+    │    ├── ant1_val.png   
+    │    ├── ... 
+    │    └── antn_val.png   
     └── bees
          ├── bee1_val.png     
          ├── ...       
