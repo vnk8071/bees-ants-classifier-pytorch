@@ -38,11 +38,9 @@ Wait to download data
 ## Visualize
 
 Visualize:
-    - Show images
-    
-    - Graph of model
-    
-    - Result epoch of train and validate  
+- Show images
+- Graph of model 
+- Result epoch of train and validate  
 
 Use Tensorboard 
 ```bash
