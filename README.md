@@ -13,9 +13,12 @@ Result of 10 epoch:
 - Best val Acc: 0.843137
 
 ## Table of content
-* [Installation](##Installation)
+* [Install](##Install)
+* [Visualize](##Visualize)
+* [Usage](##Usage)
+* [Predict](##Predict)
 
-## Installation
+## Install
 Create virtual environment
 ```bash
 conda create -n virtualenv python=3.7
@@ -38,6 +41,7 @@ or
 ```
 
 Wait to download data
+
 ## Visualize
 
 Visualize:
@@ -74,7 +78,7 @@ Epoch 1/10
 Done
 ```
 
-## Prediction
+## Predict
 Change the directory of TEST_IMAGES_DIR in test_config.json
 
 After that, run
