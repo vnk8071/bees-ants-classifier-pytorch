@@ -1,10 +1,10 @@
 ﻿# Bees-Ants-classifier using Pytorch
 
-Data collected form Pytorch: https://download.pytorch.org/tutorial/hymenoptera_data.zip
+<u>Data collected from Pytorch</u>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
-Organizing project follow: https://github.com/qnn122/organizing-training-project-tutorial
+<u>Organizing project follow</u>: https://github.com/qnn122/organizing-training-project-tutorial
 
-Reference: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
+<u>Reference</u>: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
 
 Run project with CPU
 
