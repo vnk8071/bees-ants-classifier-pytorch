@@ -10,17 +10,17 @@ Result of 10 epochs:
 
 ## Table of content
 * [Acknowledgements](#Acknowledgements)
-* [Install](#Install)
-* [Visualize](#Visualize)
+* [Installation](#Installation)
+* [Visualization](#Visualizaztion)
 * [Usage](#Usage)
-* [Predict](#Predict)
+* [Prediction](#Prediction)
 
 ## Acknowledgements
 <ins>Organizing project follow</ins>: https://github.com/qnn122/organizing-training-project-tutorial
 
 <ins>Reference</ins>: https://github.com/python-engineer/pytorchTutorial/blob/master/15_transfer_learning.py
 
-## Install
+## Installation
 Create virtual environment
 ```bash
 conda create -n virtualenv python=3.7
