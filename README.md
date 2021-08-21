@@ -1,5 +1,7 @@
 ﻿# Bees-Ants-classifier using Pytorch
- 
+This is a single classifier model to predict bee and ant image.
+
+![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/tree/master/images/bees_ants.png)
 Run project with CPU
 
 Result of 10 epochs:
@@ -23,8 +25,8 @@ Result of 10 epochs:
 ## Installation
 Create virtual environment
 ```bash
-conda create -n virtualenv python=3.7
-conda activate virtualenv
+conda create -n beeantcls python=3.7
+conda activate beeantcls
 ```
 Change into directory of project
 ```bash
