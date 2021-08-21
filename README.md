@@ -1,6 +1,7 @@
 ﻿# Bees-Ants-classifier using Pytorch
 This is a single classifier model to predict bee and ant image.
 
+Some bee and ant images
 ![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/blob/master/images/bees_ants.PNG)
 
 Run project with CPU
