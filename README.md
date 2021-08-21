@@ -1,7 +1,7 @@
 ﻿# Bees-Ants-classifier using Pytorch
 This is a single classifier model to predict bee and ant image.
 
-![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/tree/master/images/bees_ants.PNG)
+![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/blob/master/images/bees_ants.PNG)
 
 <ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
@@ -33,7 +33,7 @@ Method: Transfer learning by using Resnet 18 and just change parameter of last l
 
 Resnet 18 architecture
 
-![Resnet18](https://github.com/vnk8071/bees-ants-classifier-pytorch/tree/master/images/resnet18.PNG)
+![Resnet18](https://github.com/vnk8071/bees-ants-classifier-pytorch/blob/master/images/resnet18.png)
 
 Run project with CPU
 
