@@ -1,14 +1,7 @@
 ﻿# Bees-Ants-classifier using Pytorch
 This is a single classifier model to predict bee and ant image.
 
-Some bee and ant images
-![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/blob/master/images/bees_ants.PNG)
-
-Run project with CPU
-
-Result of 10 epochs:
-- Training complete in 3m 12s
-- Best validate accuracy: 0.843137
+![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/tree/master/images/bees_ants.png)
 
 <ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
@@ -35,6 +28,18 @@ hymenoptera_data/
          ├── ...       
          └── been_val.png
 ```
+
+Method: Transfer learning by using Resnet 18 and just change parameter of last layer
+
+Resnet 18 architecture
+
+![Resnet18](https://github.com/vnk8071/bees-ants-classifier-pytorch/tree/master/images/resnet18.png)
+
+Run project with CPU
+
+Result of 10 epochs:
+- Training complete in 3m 12s
+- Best validate accuracy: 0.843137
 
 ## Table of content
 * [Acknowledgements](#Acknowledgements)
@@ -66,7 +71,9 @@ pip install -r requirements.txt
 Download and set up data by
 ```bash
 bash setup_data.sh
+
 or
+
 ./setup_data.sh
 ```
 
