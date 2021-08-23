@@ -28,6 +28,13 @@ class Tester(TestConfig):
         self.image_transformation = transforms.Compose(image_transformation)
 
     def get_test_loader(self):
+        '''
+        Input: Folder contain images with no labels
+        Output: Split image follow format test_config with
+            - Transform
+            - Batch size: 4
+            - Num workers: 0
+        '''
         test_dataset = BeeAndAntDatasetTest(
             self.TEST_IMAGE_DIR, self.image_transformation)
         test_loader = DataLoader(test_dataset, batch_size=self.BATCH_SIZE,
@@ -63,6 +70,10 @@ class Tester(TestConfig):
         return predict_labels, file_list
 
     def predict_image(self, image_input):
+        '''
+        Input: Image of bee and ant
+        Output: Predcit label of that image
+        '''
         model = self.load_model()
         with torch.no_grad():
             image = PIL.Image.open(image_input)
