@@ -7,7 +7,7 @@ Some bee and ant images:
 
 <ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
 
-The directory of dataset structured
+The directory of dataset structured:
 
 ```bash
 hymenoptera_data/
@@ -63,7 +63,7 @@ conda activate beeantcls
 ```
 Change into directory of project
 ```bash
-cd bees-ants-classifier/
+cd bees-ants-classifier-pytorch/
 ```
 Install dependent packages
 ```bash
@@ -79,7 +79,7 @@ or
 ./setup_data.sh
 ```
 
-Wait to download data
+Wait to download data.
 
 ## Visualization
 Visualize:
@@ -122,7 +122,7 @@ Run
 python test.py
 ```
 
-Output csv file save into predicts folder
+Output csv file save into predicts folder.
 
 Or you can use Streamlit API by:
 ```bash
