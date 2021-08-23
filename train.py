@@ -5,6 +5,7 @@ from pprint import pprint
 CONFIG_PATH = './config/train_config.json'
 params = json.load(open(CONFIG_PATH, 'r'))
 pprint(params)
+
 model = BeeAntClassifier(**params)
 
 

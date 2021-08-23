@@ -7,7 +7,6 @@ CONFIG_PATH = os.path.join('config', 'test_config.json')
 params = json.load(open(CONFIG_PATH, 'r'))
 pprint(params)
 
-
 predicter = Tester(**params)
 
 
