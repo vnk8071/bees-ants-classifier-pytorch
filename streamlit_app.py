@@ -13,8 +13,8 @@ predict = Tester(**params)
 def main():
     st.title("Tool to predict ant and bee image")
 
-    image_uploaded = st.file_uploader("Choose an bee or ant image... ", type=['png', 'jpg', 'jpeg'],
-                                      accept_multiple_files=False)
+    image_uploaded = st.sidebar.file_uploader("Choose an bee or ant image... ", type=['png', 'jpg', 'jpeg'],
+                                              accept_multiple_files=False)
 
     if image_uploaded is not None:
         image = PIL.Image.open(image_uploaded).convert('RGB')
