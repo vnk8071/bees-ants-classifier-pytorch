@@ -1,6 +1,8 @@
 ﻿# Bees-Ants-classifier using Pytorch
 This is a single classifier model to predict bee and ant image.
 
+Some bee and ant images:
+
 ![Some bee and ant images](https://github.com/vnk8071/bees-ants-classifier-pytorch/blob/master/images/bees_ants.PNG)
 
 <ins>Data collected from Pytorch</ins>: https://download.pytorch.org/tutorial/hymenoptera_data.zip
@@ -115,13 +117,20 @@ Done
 ```
 
 ## Prediction
-Change the directory of TEST_IMAGES_DIR in test_config.json
-
-After that, run
+Run
 ```bash
 python test.py
 ```
 
 Output csv file save into predicts folder
+
+Or you can use Streamlit API by:
+```bash
+streamlit run streamlit_app.py
+```
+
+With URL: http://localhost:8501/
+
+And upload any image of bee and ant to predict.
 
 Let's try.
