@@ -1,5 +1,5 @@
 {
-    "TEST_IMAGE_DIR": "./data/hymenoptera_data/test",
+    "TEST_IMAGE_DIR": "./samples",
     "CHECKPOINT_DIR": "./models/best_model.pth",
     "SAVE_PREDICTS_CSV": "./predicts/predict_test.csv",
     "IMAGE_SIZE": 224,

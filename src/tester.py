@@ -1,8 +1,8 @@
 import os
+import PIL.Image
 import pandas as pd
 import torch
 from torch.utils.data import DataLoader
-import torchvision.datasets as datasets
 from torchvision import transforms
 from src.model import ResNet
 from torchvision.transforms import transforms
@@ -61,6 +61,17 @@ class Tester(TestConfig):
         return out_pred.to("cpu").tolist(), file_list
         '''
         return predict_labels, file_list
+
+    def predict_image(self, image_input):
+        model = self.load_model()
+        with torch.no_grad():
+            image = PIL.Image.open(image_input)
+            image_tensor = self.image_transformation(image)
+            image_tensor = image_tensor.unsqueeze(0)
+            predict = model(image_tensor)
+            _, predicted = torch.max(predict, 1)
+            classifier = self.CLASSES[predicted]
+        return classifier
 
     def save_predict_csv(self):
         '''
