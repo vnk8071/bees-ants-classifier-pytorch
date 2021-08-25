@@ -81,6 +81,16 @@ or
 
 Wait to download data.
 
+Start download data:
+
+Total size:  47286322
+
+[################################] 92357/92357 - 00:00:13
+
+Download done
+
+Success unzip file
+
 ## Visualization
 Visualize:
 - Show images
