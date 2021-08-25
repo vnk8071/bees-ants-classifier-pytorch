@@ -2,6 +2,7 @@ import os
 import shutil
 import requests
 from zipfile import ZipFile
+from clint.textui import progress
 
 URL = 'https://download.pytorch.org/tutorial/hymenoptera_data.zip'
 TARGET_PATH = 'data/hymenoptera_data.zip'
@@ -13,12 +14,15 @@ def download_file_from_pytorch(url, target_path):
 
 
 def save_response_content(response, target_path):
-    CHUNK_SIZE = 512
+    CHUNK_SIZE = 32768
 
     with open(target_path, "wb") as f:
-        for chunk in response.iter_content(CHUNK_SIZE):
+        TOTAL_LENGTH = int(response.headers.get('content-length'))
+        print("Total size: ", TOTAL_LENGTH)
+        for chunk in progress.bar(response.iter_content(CHUNK_SIZE), expected_size=(TOTAL_LENGTH/32768) + 1):
             if chunk:  # filter out keep-alive new chunks
                 f.write(chunk)
+                f.flush()
 
 
 if __name__ == '__main__':
