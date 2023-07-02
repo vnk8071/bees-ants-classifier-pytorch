@@ -65,6 +65,7 @@ class BeeAntClassifier(Trainer):
                 running_corrects = 0
 
                 for images, labels in dataloaders[phase]:
+                    model = model.to(device)
                     images = images.to(device)
                     labels = labels.to(device)
 
