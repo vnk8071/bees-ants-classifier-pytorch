@@ -32,9 +32,10 @@ class BeeAntDataset:
     def set_up_training_data(self, BATCH_SIZE, NUM_WORKERS):
         dataset_sizes = {x: len(self.image_datasets[x]) for x in [
             'train', 'val']}
-        dataloaders = {x: DataLoader(self.image_datasets[x], batch_size=BATCH_SIZE,
-                                     shuffle=True, num_workers=NUM_WORKERS)
-                       for x in ['train', 'val']}
+        dataloaders = {'train': DataLoader(self.image_datasets['train'], batch_size=BATCH_SIZE,
+                                     shuffle=True, num_workers=NUM_WORKERS),
+                       'val': DataLoader(self.image_datasets['val'], batch_size=BATCH_SIZE,
+                                     shuffle=False, num_workers=NUM_WORKERS)}
         return dataset_sizes, dataloaders
 
     def __getitem__(self, index):
